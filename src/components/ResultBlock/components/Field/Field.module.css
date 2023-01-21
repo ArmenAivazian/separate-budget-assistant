@@ -1,0 +1,13 @@
+.name {
+    text-align: right;
+}
+
+.value {
+    text-align: left;
+}
+
+.topLine {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    margin-top: 5px;
+}
