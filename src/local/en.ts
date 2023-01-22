@@ -14,7 +14,7 @@ export const local = {
   targetLastDay: "Target Last Day",
   rent: "Rent",
   investmentRatio: "Investment ratio (%)",
-  result: "Result",
+  result: "Result 1",
   investment: "Investment",
-  sum: "Sum"
+  sum: "Sum",
 };
