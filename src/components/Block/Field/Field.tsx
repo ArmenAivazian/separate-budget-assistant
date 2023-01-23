@@ -1,4 +1,4 @@
-import { ConfigValue } from "../../../../types/ConfigValue";
+import { ConfigValue } from "../../../types/ConfigValue";
 import style from "./Field.module.css";
 
 export function Field({

@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import style from "./App.module.css";
 import { Block } from "./components/Block";
 import { ResultBlock } from "./components/ResultBlock";
+import { SpecificBlock } from "./components/SpecificBlock";
 
 import { ConfigContext } from "./context/ConfigContextWrapper";
 import { local } from "./local/en";
 
 function App() {
+  const [activeTab, setActiveTab] = useState<"month" | "specific">("month");
   const {
     armenSalary,
     nastyaSalary,
@@ -39,9 +41,22 @@ function App() {
 
   return (
     <div className={style.app}>
+      <div>
+        <button className={style.tab} onClick={() => setActiveTab("month")}>
+          {local.tabMonth}
+        </button>
+        <button className={style.tab} onClick={() => setActiveTab("specific")}>
+          {local.tabSpecific}
+        </button>
+      </div>
       <Block title={local.titleGeneral} list={firstBlock} />
-      <Block title={local.titleCalculate} list={secondBlock} />
-      <ResultBlock />
+      {activeTab === "month" && (
+        <>
+          <Block title={local.titleCalculate} list={secondBlock} />
+          <ResultBlock />
+        </>
+      )}
+      {activeTab === "specific" && <SpecificBlock />}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { ConfigValue } from "../../types/ConfigValue";
 import { Title } from "../Title";
 import style from "./Block.module.css";
-import { Field } from "./components/Field";
+import { Field } from "./Field";
 
 export function Block({ title, list }: { title: string; list: ConfigValue[] }) {
   return (

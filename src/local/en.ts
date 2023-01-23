@@ -17,4 +17,8 @@ export const local = {
   result: "Result",
   investment: "Investment",
   sum: "Sum",
+  tabMonth: "For month",
+  tabSpecific: "For specific",
+  specific: "Specific",
+  fieldName: "Field"
 };
