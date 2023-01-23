@@ -1,0 +1,37 @@
+// Vitest Snapshot v1
+
+exports[`Block > snapshots > default 1`] = `
+[
+  <h1
+    className="_title_d28f04"
+  >
+    title
+  </h1>,
+  <div
+    className="_block-grid_17898c"
+  >
+    <p
+      className="_field-name_10d9f7"
+    >
+      text
+       :
+    </p>
+    <input
+      onChange={[Function]}
+      type="number"
+      value="value"
+    />
+    <p
+      className="_field-name_10d9f7"
+    >
+      text2
+       :
+    </p>
+    <input
+      onChange={[Function]}
+      type="number"
+      value="value2"
+    />
+  </div>,
+]
+`;

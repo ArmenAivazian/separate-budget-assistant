@@ -1,0 +1,56 @@
+// Vitest Snapshot v1
+
+exports[`Block -> Field > snapshots > date 1`] = `
+[
+  <p
+    className="_field-name_10d9f7"
+  >
+    text
+     :
+  </p>,
+  <input
+    onChange={[Function]}
+    type="date"
+    value="100"
+  />,
+]
+`;
+
+exports[`Block -> Field > snapshots > default 1`] = `
+[
+  <p
+    className="_field-name_10d9f7"
+  >
+    text
+     :
+  </p>,
+  <input
+    onChange={[Function]}
+    type="number"
+    value="100"
+  />,
+]
+`;
+
+exports[`Block -> Field > snapshots > select 1`] = `
+[
+  <p
+    className="_field-name_10d9f7"
+  >
+    text
+     :
+  </p>,
+  <select>
+    <option
+      value="option1"
+    >
+      option1
+    </option>
+    <option
+      value="option2"
+    >
+      option2
+    </option>
+  </select>,
+]
+`;
