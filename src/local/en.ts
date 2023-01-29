@@ -16,9 +16,10 @@ export const local = {
   investmentRatio: "Investment ratio (%)",
   result: "Result",
   investment: "Investment",
-  sum: "Sum",
+  sumExpenses: "Sum Expenses",
+  ownBalance: "Balance",
   tabMonth: "For month",
   tabSpecific: "For specific",
   specific: "Specific",
-  fieldName: "Field"
+  fieldName: "Field",
 };

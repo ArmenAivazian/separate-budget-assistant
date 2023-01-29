@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { local } from "../../local/en";
 import { Block } from "../Block";
-import { ResultField } from "../ResultBlock/components/ResultField";
+import { ResultFields } from "../ResultBlock/components/ResultFields";
 import { Title } from "../Title";
 import style from "./SpecificBlock.module.css";
 
@@ -18,7 +18,7 @@ export function SpecificBlock() {
       />
       <Title text={local.result} />
       <div className={style.grid}>
-        <ResultField name={local.fieldName} value={+fieldValue} />
+        <ResultFields name={local.fieldName} value={+fieldValue} />
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import renderer from "react-test-renderer";
 import { ConfigContextWrapper } from "../../../../context/ConfigContextWrapper";
-import { ResultField } from "./ResultField";
+import { ResultFields } from "./ResultFields";
 import { getFieldValue } from "./utils/getFieldValue";
 
 const ConfigContext = createContext({

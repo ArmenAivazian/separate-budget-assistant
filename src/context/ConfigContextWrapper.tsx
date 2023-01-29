@@ -20,23 +20,36 @@ export const ConfigContext = createContext<{
 }>({} as any);
 
 export function ConfigContextWrapper({ children }: { children: JSX.Element }) {
+  const walletFirstDay = "2022-09-27";
+  const nextMonth = new Date().getMonth() + 2;
+  const correctNextMonth = nextMonth > 9 ? nextMonth : `0${nextMonth}`;
+  const regExpForMM = RegExp(/-(\d{2})-/);
+
   const defArmenSalary = getLocalStorageValue(LocalStorageName.ArmenSalary);
   const defNastyaSalary = getLocalStorageValue(LocalStorageName.NastyaSalary);
   const defRent = getLocalStorageValue(LocalStorageName.Rent);
   const defInvestRatio = getLocalStorageValue(LocalStorageName.InvestmentRatio);
+  const defFirstDay =
+    getLocalStorageValue(LocalStorageName.TargetFirstDay) || walletFirstDay;
+  const defLastDay = new Date().toISOString().slice(0, 10);
+  const defTFirstDay = new Date().toISOString().slice(0, 10);
+  const defTLastDay = new Date()
+    .toISOString()
+    .slice(0, 10)
+    .replace(regExpForMM, `-${correctNextMonth}-`);
 
   const [armenSalary, setArmenSalary] = useState(defArmenSalary);
   const [nastyaSalary, setNastyaSalary] = useState(defNastyaSalary);
   const [rent, setRent] = useState(defRent);
   const [investmentRatio, setInvestmentRatio] = useState(defInvestRatio);
-  const [firstDay, setFirstDay] = useState("");
-  const [lastDay, setLastDay] = useState("");
+  const [firstDay, setFirstDay] = useState(defFirstDay);
+  const [lastDay, setLastDay] = useState(defLastDay);
   const [costProducts, setCostProducts] = useState("");
   const [costHealth, setCostHealth] = useState("");
   const [costServices, setCostServices] = useState("");
   const [costCommunalApartment, setCommunalApartment] = useState("");
-  const [targetFirstDay, setTargetFirstDay] = useState("");
-  const [targetLastDay, setTargetLastDay] = useState("");
+  const [targetFirstDay, setTargetFirstDay] = useState(defTFirstDay);
+  const [targetLastDay, setTargetLastDay] = useState(defTLastDay);
 
   return (
     <ConfigContext.Provider
@@ -101,6 +114,7 @@ export function ConfigContextWrapper({ children }: { children: JSX.Element }) {
           text: local.targetFirstDay,
           value: targetFirstDay,
           type: "date",
+          localStorageName: LocalStorageName.TargetFirstDay,
           setValue: setTargetFirstDay,
         },
         targetLastDay: {
