@@ -10,6 +10,7 @@ export function Field({ withLine, text, value1, value2 }: FieldProps) {
       <p className={nameStyle}>{text}</p>
       <p className={valueStyle}>[A] {value1}</p>
       <p className={valueStyle}>[N] {value2}</p>
+      <p className={valueStyle}>[SUM] {value1 + (value2 || 0)}</p>
     </>
   ) : (
     <></>
